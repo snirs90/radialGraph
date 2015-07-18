@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="example1"></div>
+
+<script>
+    function createGraph() {
+        var elem = document.getElementById('example1');
+        var options = {
+            circle: {
+                diameter: 50
+            },
+            outer: {
+                value: 100
+            },
+            inner: {
+                value: 45.3,
+                negativeColor: 'red'
+            }
+        };
+        radialGraph.create(elem, options);
+    }
+    document.addEventListener('DOMContentLoaded', createGraph, false);
+</script>
+
+<script src="bower_components/lodash/lodash.min.js"></script>
+<script src="bower_components/raphael/raphael-min.js"></script>
+<script src="radialGraph.js"></script>
+</body>
+</html>
